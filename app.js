@@ -53,7 +53,7 @@ async function init() {
   allCountries = data.countries;
   maturityData = data.maturity_levels;
 
-  initMap();
+  await initMap();
   renderLegend();
   renderCountryList();
   renderMarkers();
@@ -64,19 +64,32 @@ async function init() {
 }
 
 // ===== Map =====
-function initMap() {
+async function initMap() {
   map = L.map('map', {
     center: [20, 10],
     zoom: 2,
     minZoom: 1.5,
     maxZoom: 8,
     zoomControl: true,
+    attributionControl: false,
   });
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-    maxZoom: 19,
-  }).addTo(map);
+  // Load offline world GeoJSON (no tiles needed)
+  try {
+    const resp = await fetch('data/world-110m.geojson');
+    const worldGeo = await resp.json();
+    L.geoJSON(worldGeo, {
+      style: {
+        color: '#30363d',
+        weight: 0.7,
+        fillColor: '#1c2333',
+        fillOpacity: 1,
+      },
+      interactive: false,
+    }).addTo(map);
+  } catch (e) {
+    console.warn('Could not load world GeoJSON:', e);
+  }
 }
 
 function renderMarkers() {

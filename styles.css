@@ -293,9 +293,6 @@ a:hover { color: var(--color-accent-hover); text-decoration: underline; }
 /* Leaflet overrides */
 .leaflet-container { background: #0a1628; }
 
-.leaflet-tile-pane {
-  filter: brightness(0.45) saturate(0.6) hue-rotate(200deg);
-}
 
 .leaflet-popup-content-wrapper {
   background: var(--color-surface);
