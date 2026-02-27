@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global AI Policy Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <div class="header-title">
+        <span class="header-icon">🌐</span>
+        <div>
+          <h1>Global AI Policy Map</h1>
+          <p class="header-subtitle">Tracking AI regulation and governance worldwide</p>
+        </div>
+      </div>
+      <div class="header-controls">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Search countries or frameworks…" autocomplete="off" />
+          <div id="search-results" class="search-dropdown hidden"></div>
+        </div>
+        <div class="stats-bar">
+          <span class="stat"><strong id="stat-total">0</strong> countries tracked</span>
+          <span class="stat-divider">·</span>
+          <span class="stat"><strong id="stat-advanced">0</strong> advanced</span>
+          <span class="stat-divider">·</span>
+          <span class="stat"><strong id="stat-developing">0</strong> developing</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="filter-section">
+        <h2 class="section-label">Filter by maturity</h2>
+        <div class="legend" id="legend">
+          <!-- populated by JS -->
+        </div>
+      </div>
+
+      <div class="country-list-section">
+        <h2 class="section-label">Countries <span id="list-count" class="count-badge">0</span></h2>
+        <ul class="country-list" id="country-list">
+          <!-- populated by JS -->
+        </ul>
+      </div>
+    </aside>
+
+    <div class="map-area">
+      <div id="map"></div>
+      <div class="map-overlay-hint">Click a country marker or list item for details</div>
+    </div>
+
+    <aside class="detail-panel hidden" id="detail-panel">
+      <button class="close-btn" id="close-detail" aria-label="Close detail panel">✕</button>
+      <div id="detail-content"><!-- populated by JS --></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data current as of early 2025 · Sources: government publications, OECD AI Policy Observatory, academic research ·
+      <a href="https://oecd.ai" target="_blank" rel="noopener">OECD AI Policy Observatory</a>
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

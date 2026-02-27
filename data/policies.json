@@ -1,0 +1,371 @@
+{
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "status": "active",
+      "maturity": "advanced",
+      "summary": "Executive Order on Safe, Secure, and Trustworthy AI (Oct 2023). NIST AI Risk Management Framework. Sector-specific regulations across finance, healthcare, and defense.",
+      "frameworks": ["NIST AI RMF", "Executive Order 14110", "Blueprint for an AI Bill of Rights"],
+      "year": 2023,
+      "authority": "White House OSTP, NIST, sector regulators",
+      "highlights": [
+        "NIST AI Risk Management Framework (Jan 2023)",
+        "Executive Order on Safe AI (Oct 2023)",
+        "Blueprint for an AI Bill of Rights (Oct 2022)",
+        "Voluntary AI commitments from major companies"
+      ],
+      "links": [
+        {"label": "NIST AI RMF", "url": "https://www.nist.gov/artificial-intelligence"},
+        {"label": "Executive Order", "url": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/"}
+      ]
+    },
+    {
+      "code": "EU",
+      "name": "European Union",
+      "status": "active",
+      "maturity": "advanced",
+      "summary": "EU AI Act — the world's first comprehensive AI law. Risk-based approach categorizing AI systems into unacceptable, high, limited, and minimal risk tiers.",
+      "frameworks": ["EU AI Act", "GDPR", "Digital Markets Act"],
+      "year": 2024,
+      "authority": "European Commission, European Parliament",
+      "highlights": [
+        "EU AI Act adopted (March 2024)",
+        "Risk-based tiered regulatory approach",
+        "Bans on social scoring and real-time biometric surveillance",
+        "High-risk AI requirements: conformity assessments, transparency"
+      ],
+      "links": [
+        {"label": "EU AI Act", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"}
+      ]
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "status": "active",
+      "maturity": "advanced",
+      "summary": "Multiple targeted AI regulations: Generative AI measures, algorithm recommendation rules, deep synthesis rules. National New Generation AI Development Plan.",
+      "frameworks": ["Generative AI Interim Measures", "Algorithm Recommendation Rules", "Deep Synthesis Provisions", "AI Development Plan 2030"],
+      "year": 2023,
+      "authority": "CAC (Cyberspace Administration of China), MIIT",
+      "highlights": [
+        "Generative AI Interim Measures (Aug 2023)",
+        "Algorithm Recommendation Provisions (2022)",
+        "Deep Synthesis Provisions (2023)",
+        "National AI Development Plan targeting global leadership by 2030"
+      ],
+      "links": []
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "status": "active",
+      "maturity": "advanced",
+      "summary": "Pro-innovation, principles-based approach. Existing sector regulators apply AI oversight. AI Safety Summit hosted at Bletchley Park (Nov 2023).",
+      "frameworks": ["AI Regulation White Paper", "Bletchley Declaration", "AI Safety Institute"],
+      "year": 2023,
+      "authority": "DSIT, sector regulators (FCA, ICO, CMA, etc.)",
+      "highlights": [
+        "AI Regulation White Paper (Mar 2023)",
+        "AI Safety Summit at Bletchley Park (Nov 2023)",
+        "Bletchley Declaration signed by 28 countries",
+        "AI Safety Institute established"
+      ],
+      "links": []
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "status": "active",
+      "maturity": "developing",
+      "summary": "Artificial Intelligence and Data Act (AIDA) proposed under Bill C-27. Voluntary code of conduct for generative AI. Pan-Canadian AI Strategy.",
+      "frameworks": ["AIDA (Bill C-27)", "Voluntary Generative AI Code", "Pan-Canadian AI Strategy"],
+      "year": 2022,
+      "authority": "ISED Canada, Privacy Commissioner",
+      "highlights": [
+        "Bill C-27 introduced AIDA (Jun 2022)",
+        "Voluntary Code of Conduct for Generative AI (Sep 2023)",
+        "Pan-Canadian AI Strategy ($443M investment)",
+        "Montreal Declaration for Responsible AI"
+      ],
+      "links": []
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "status": "active",
+      "maturity": "developing",
+      "summary": "Agile governance approach. AI Strategy 2022. Hiroshima AI Process under G7 presidency. Voluntary guidelines for generative AI.",
+      "frameworks": ["AI Strategy 2022", "Hiroshima AI Process", "Social Principles of Human-Centric AI"],
+      "year": 2023,
+      "authority": "Cabinet Office, METI, MIC",
+      "highlights": [
+        "Hiroshima AI Process (G7 2023)",
+        "AI Strategy 2022 updated",
+        "Voluntary guidelines for generative AI providers",
+        "Social Principles of Human-Centric AI"
+      ],
+      "links": []
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "status": "active",
+      "maturity": "developing",
+      "summary": "National AI Strategy. AI industry promotion focused legislation. Seoul AI Safety Summit (May 2024) co-hosted with UK.",
+      "frameworks": ["National AI Strategy", "AI Industry Promotion Act (draft)", "Seoul Declaration"],
+      "year": 2023,
+      "authority": "MSIT (Ministry of Science and ICT)",
+      "highlights": [
+        "Co-hosted Seoul AI Safety Summit (May 2024)",
+        "AI Industry Promotion Act under development",
+        "National AI Committee established",
+        "AI-specific copyright and liability frameworks"
+      ],
+      "links": []
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "status": "active",
+      "maturity": "developing",
+      "summary": "Australia's AI Ethics Framework (voluntary). Safe and Responsible AI consultation. Mandatory guardrails for high-risk AI proposed.",
+      "frameworks": ["AI Ethics Framework", "Responsible AI Program", "Safe and Responsible AI Policy"],
+      "year": 2023,
+      "authority": "DISR, CSIRO",
+      "highlights": [
+        "Voluntary AI Ethics Principles (2019, updated)",
+        "Consultation on mandatory guardrails (2023)",
+        "AI Safety Standard development",
+        "National Robotics Strategy"
+      ],
+      "links": []
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "status": "developing",
+      "maturity": "emerging",
+      "summary": "India AI Mission ($1.2B). Advisory on AI deployment. IndiaAI initiative. No binding AI law yet — innovation-first approach.",
+      "frameworks": ["India AI Mission", "Digital Personal Data Protection Act", "National AI Strategy"],
+      "year": 2023,
+      "authority": "MeitY (Ministry of Electronics and IT)",
+      "highlights": [
+        "India AI Mission announced (Mar 2024)",
+        "Advisory for AI intermediaries (Mar 2024)",
+        "Digital Personal Data Protection Act (2023)",
+        "National AI Portal: ai.gov.in"
+      ],
+      "links": []
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "status": "developing",
+      "maturity": "emerging",
+      "summary": "AI Bill under debate in Congress. Brazilian AI Strategy (EBIA). LGPD (data protection law) applies to AI. Responsible AI principles adopted.",
+      "frameworks": ["Brazilian AI Bill (PL 2338/2023)", "EBIA", "LGPD"],
+      "year": 2023,
+      "authority": "ANPD, Senate Special Commission",
+      "highlights": [
+        "AI Bill PL 2338/2023 in Senate",
+        "Brazilian AI Strategy (EBIA)",
+        "LGPD applies to AI data processing",
+        "CGI.br AI principles"
+      ],
+      "links": []
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "status": "active",
+      "maturity": "developing",
+      "summary": "Model AI Governance Framework (2019, updated 2020). AI Verify testing toolkit. National AI Strategy 2.0 (2023). ASEAN AI Governance.",
+      "frameworks": ["Model AI Governance Framework", "AI Verify", "National AI Strategy 2.0"],
+      "year": 2023,
+      "authority": "IMDA, PDPC, Smart Nation Group",
+      "highlights": [
+        "National AI Strategy 2.0 (Dec 2023)",
+        "AI Verify testing toolkit launched",
+        "Model AI Governance Framework (2019)",
+        "ASEAN Guide on AI Governance"
+      ],
+      "links": []
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "status": "active",
+      "maturity": "advanced",
+      "summary": "Implementing EU AI Act. National AI Strategy. KI-Bundesverband. Coalition agreement emphasizes innovation with guardrails.",
+      "frameworks": ["EU AI Act", "National AI Strategy", "Data Act"],
+      "year": 2023,
+      "authority": "BMWK, Federal Ministry of Justice",
+      "highlights": [
+        "National AI Strategy (3rd iteration 2023)",
+        "Implementing EU AI Act as EU member",
+        "Federal Agency for Disruptive Innovation",
+        "Focus on AI in industrial/manufacturing sectors"
+      ],
+      "links": []
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "status": "active",
+      "maturity": "advanced",
+      "summary": "Active in EU AI Act negotiations. National AI strategy. Comité de l'IA Générative report. Paris AI Action Summit (Feb 2025).",
+      "frameworks": ["EU AI Act", "National AI Strategy", "Vilani Report"],
+      "year": 2024,
+      "authority": "CNIL, Conseil d'État",
+      "highlights": [
+        "Hosted Paris AI Action Summit (Feb 2025)",
+        "Strong EU AI Act participation",
+        "National AI strategy with €2.5B investment",
+        "CNIL guidance on GDPR and AI"
+      ],
+      "links": []
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "status": "active",
+      "maturity": "developing",
+      "summary": "Regulatory principles for AI published. National AI Plan. Innovation Authority guidelines. Principles-based approach favoring innovation.",
+      "frameworks": ["Regulatory AI Principles", "National AI Plan", "Privacy Protection Act"],
+      "year": 2023,
+      "authority": "Ministry of Innovation, Science & Technology",
+      "highlights": [
+        "Government regulatory AI principles (2023)",
+        "National AI Plan adopted",
+        "Innovation Authority guidelines",
+        "Focus on AI in defense and health"
+      ],
+      "links": []
+    },
+    {
+      "code": "ZA",
+      "name": "South Africa",
+      "status": "developing",
+      "maturity": "emerging",
+      "summary": "National AI Policy Framework (2022). POPIA applies to AI. Presidential Commission on the Fourth Industrial Revolution.",
+      "frameworks": ["National AI Policy Framework", "POPIA", "4IR Commission"],
+      "year": 2022,
+      "authority": "DTIC, PC4IR",
+      "highlights": [
+        "National AI Policy Framework (2022)",
+        "Presidential Commission on 4IR",
+        "POPIA data protection framework",
+        "Smart South Africa Roadmap"
+      ],
+      "links": []
+    },
+    {
+      "code": "AE",
+      "name": "UAE",
+      "status": "active",
+      "maturity": "developing",
+      "summary": "National AI Strategy 2031. Ministry of AI established. AI University. UAE AI regulatory principles. Proactive adoption approach.",
+      "frameworks": ["National AI Strategy 2031", "UAE AI Principles", "Personal Data Protection Law"],
+      "year": 2023,
+      "authority": "Ministry of AI, TDRA",
+      "highlights": [
+        "World's first Ministry of AI (2017)",
+        "National AI Strategy 2031",
+        "Mohamed bin Zayed University of AI",
+        "UAE AI Principles (2023)"
+      ],
+      "links": []
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "status": "developing",
+      "maturity": "emerging",
+      "summary": "No AI-specific law. Data protection law (LFPDPPP) applies. National Digital Strategy. Legislative discussions on AI ethics.",
+      "frameworks": ["LFPDPPP", "National Digital Strategy", "AI Ethics Discussions"],
+      "year": 2022,
+      "authority": "INAI, SCT",
+      "highlights": [
+        "LFPDPPP data protection applies to AI",
+        "National Digital Strategy includes AI",
+        "Senate discussions on AI regulation",
+        "Participation in OECD AI principles"
+      ],
+      "links": []
+    },
+    {
+      "code": "NG",
+      "name": "Nigeria",
+      "status": "developing",
+      "maturity": "emerging",
+      "summary": "National AI Strategy (2022). NDPR data protection applies. AI Ethics Framework. Focus on AI for development goals.",
+      "frameworks": ["National AI Policy", "NDPR", "AI Strategy"],
+      "year": 2022,
+      "authority": "NITDA, NCC",
+      "highlights": [
+        "Nigeria National AI Policy (2022)",
+        "NDPR data protection regulations",
+        "AI ecosystem development programs",
+        "Focus on fintech and agriculture AI"
+      ],
+      "links": []
+    },
+    {
+      "code": "KE",
+      "name": "Kenya",
+      "status": "developing",
+      "maturity": "emerging",
+      "summary": "Draft AI policy under development. Data Protection Act (2019) applies. iHub tech ecosystem. Focus on fintech AI applications.",
+      "frameworks": ["Draft AI Policy", "Data Protection Act 2019"],
+      "year": 2023,
+      "authority": "ICT Authority, Office of Data Protection Commissioner",
+      "highlights": [
+        "Data Protection Act (2019) in force",
+        "AI policy development ongoing",
+        "Silicon Savannah hub for AI innovation",
+        "M-Pesa AI-powered financial services"
+      ],
+      "links": []
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "status": "active",
+      "maturity": "developing",
+      "summary": "National AI Development Strategy to 2030. Federal AI project. Regulatory sandboxes. Sovereign approach to AI with state direction.",
+      "frameworks": ["National AI Strategy 2030", "Federal AI Project", "Regulatory Sandboxes"],
+      "year": 2023,
+      "authority": "Ministry of Digital Development",
+      "highlights": [
+        "National AI Strategy to 2030",
+        "Federal AI project launched",
+        "AI regulatory sandboxes in Moscow",
+        "State-directed AI development"
+      ],
+      "links": []
+    }
+  ],
+  "maturity_levels": {
+    "advanced": {
+      "label": "Advanced",
+      "description": "Comprehensive legislation or frameworks in place or near adoption",
+      "color": "#1a7f37"
+    },
+    "developing": {
+      "label": "Developing",
+      "description": "Active policy development with partial frameworks or voluntary guidelines",
+      "color": "#bf8700"
+    },
+    "emerging": {
+      "label": "Emerging",
+      "description": "Early-stage policies or strategy documents; limited binding regulation",
+      "color": "#e36209"
+    },
+    "minimal": {
+      "label": "Minimal / None",
+      "description": "No significant AI-specific policy activity identified",
+      "color": "#8b949e"
+    }
+  }
+}
