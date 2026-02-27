@@ -18,6 +18,20 @@
       "links": [
         {"label": "NIST AI RMF", "url": "https://www.nist.gov/artificial-intelligence"},
         {"label": "Executive Order", "url": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/"}
+      ],
+      "scores": {
+        "regulatory_burden": 45,
+        "legal_certainty": 60,
+        "data_localization": 20,
+        "market_openness": 85,
+        "political_stability": 50,
+        "ip_liability_risk": 55
+      },
+      "expansion_notes": [
+        "Monitor evolving executive policy — EO 14110 was revoked in Jan 2025",
+        "NIST AI RMF provides a stable compliance baseline across sectors",
+        "Sector-specific rules vary widely (FDA for health, OCC for finance)",
+        "Strong IP protection and established AI talent market"
       ]
     },
     {
@@ -37,6 +51,20 @@
       ],
       "links": [
         {"label": "EU AI Act", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"}
+      ],
+      "scores": {
+        "regulatory_burden": 85,
+        "legal_certainty": 80,
+        "data_localization": 60,
+        "market_openness": 70,
+        "political_stability": 80,
+        "ip_liability_risk": 70
+      },
+      "expansion_notes": [
+        "Full EU AI Act compliance required by Aug 2026 for high-risk systems",
+        "Appoint an EU representative; register in the EU AI database",
+        "GDPR data transfer restrictions require SCCs or adequacy decisions",
+        "Significant fines possible — up to €35M or 7% of global turnover"
       ]
     },
     {
@@ -54,7 +82,21 @@
         "Deep Synthesis Provisions (2023)",
         "National AI Development Plan targeting global leadership by 2030"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 75,
+        "legal_certainty": 45,
+        "data_localization": 90,
+        "market_openness": 30,
+        "political_stability": 60,
+        "ip_liability_risk": 55
+      },
+      "expansion_notes": [
+        "Foreign company access highly restricted in AI-sensitive sectors",
+        "All personal data must be stored locally; cross-border transfer requires security assessment",
+        "Generative AI products require government security review before launch",
+        "Consider a local JV structure to navigate regulatory and market requirements"
+      ]
     },
     {
       "code": "GB",
@@ -71,7 +113,21 @@
         "Bletchley Declaration signed by 28 countries",
         "AI Safety Institute established"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 40,
+        "legal_certainty": 65,
+        "data_localization": 40,
+        "market_openness": 80,
+        "political_stability": 70,
+        "ip_liability_risk": 50
+      },
+      "expansion_notes": [
+        "Light-touch, principles-based regulation — one of the most AI-friendly jurisdictions",
+        "Sector regulators (FCA, ICO, CMA) issue guidance relevant to your industry",
+        "Post-Brexit UK-EU adequacy decision covers most data transfer needs",
+        "Government actively welcomes AI investment; Innovate UK funding available"
+      ]
     },
     {
       "code": "CA",
@@ -88,7 +144,21 @@
         "Pan-Canadian AI Strategy ($443M investment)",
         "Montreal Declaration for Responsible AI"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 50,
+        "legal_certainty": 55,
+        "data_localization": 30,
+        "market_openness": 80,
+        "political_stability": 75,
+        "ip_liability_risk": 45
+      },
+      "expansion_notes": [
+        "AIDA (Bill C-27) has stalled — regulatory uncertainty for high-impact AI systems",
+        "Voluntary Code of Conduct is current compliance baseline for generative AI",
+        "Quebec's Law 25 adds enhanced privacy obligations beyond federal law",
+        "Strong talent base through pan-Canadian AI strategy hubs (Montreal, Toronto, Edmonton)"
+      ]
     },
     {
       "code": "JP",
@@ -105,7 +175,21 @@
         "Voluntary guidelines for generative AI providers",
         "Social Principles of Human-Centric AI"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 35,
+        "legal_certainty": 60,
+        "data_localization": 25,
+        "market_openness": 65,
+        "political_stability": 80,
+        "ip_liability_risk": 40
+      },
+      "expansion_notes": [
+        "Voluntary, agile governance — no binding AI law; favorable for early movers",
+        "Government actively pursuing AI industry partnerships via METI",
+        "Japanese language and cultural localization investment needed for consumer products",
+        "Strong existing frameworks in automotive and industrial/manufacturing AI"
+      ]
     },
     {
       "code": "KR",
@@ -122,7 +206,21 @@
         "National AI Committee established",
         "AI-specific copyright and liability frameworks"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 50,
+        "legal_certainty": 55,
+        "data_localization": 40,
+        "market_openness": 65,
+        "political_stability": 65,
+        "ip_liability_risk": 45
+      },
+      "expansion_notes": [
+        "AI Industry Promotion Act in development — monitor for binding requirements",
+        "PIPA personal data law applies to all AI-processed personal data",
+        "Strong digital infrastructure and deep AI talent pool",
+        "Government subsidies and R&D tax credits available for tech sector investment"
+      ]
     },
     {
       "code": "AU",
@@ -139,7 +237,21 @@
         "AI Safety Standard development",
         "National Robotics Strategy"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 40,
+        "legal_certainty": 60,
+        "data_localization": 30,
+        "market_openness": 80,
+        "political_stability": 85,
+        "ip_liability_risk": 40
+      },
+      "expansion_notes": [
+        "Mandatory guardrails for high-risk AI under consultation — plan ahead for 2025-26",
+        "Existing AI Ethics Principles provide voluntary compliance guidance",
+        "Strong rule of law, IP protection, and English-language market",
+        "Government's Responsible AI program offers compliance toolkits"
+      ]
     },
     {
       "code": "IN",
@@ -156,7 +268,21 @@
         "Digital Personal Data Protection Act (2023)",
         "National AI Portal: ai.gov.in"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 30,
+        "legal_certainty": 45,
+        "data_localization": 60,
+        "market_openness": 55,
+        "political_stability": 65,
+        "ip_liability_risk": 40
+      },
+      "expansion_notes": [
+        "India AI Mission offers compute access and government partnership opportunities",
+        "Digital Personal Data Protection Act (DPDPA) compliance required for personal data",
+        "MeitY advisory for AI intermediaries includes content restrictions",
+        "Large and growing market — localization and local partnerships strongly recommended"
+      ]
     },
     {
       "code": "BR",
@@ -173,7 +299,21 @@
         "LGPD applies to AI data processing",
         "CGI.br AI principles"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 40,
+        "legal_certainty": 45,
+        "data_localization": 35,
+        "market_openness": 60,
+        "political_stability": 55,
+        "ip_liability_risk": 50
+      },
+      "expansion_notes": [
+        "AI Bill (PL 2338/2023) pending — compliance framework will change on enactment",
+        "LGPD (data protection) compliance currently required for AI using personal data",
+        "Large consumer market with rapidly growing AI adoption, especially in fintech",
+        "High-risk AI use cases will face enhanced scrutiny under the proposed bill"
+      ]
     },
     {
       "code": "SG",
@@ -190,7 +330,21 @@
         "Model AI Governance Framework (2019)",
         "ASEAN Guide on AI Governance"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 35,
+        "legal_certainty": 75,
+        "data_localization": 25,
+        "market_openness": 90,
+        "political_stability": 90,
+        "ip_liability_risk": 35
+      },
+      "expansion_notes": [
+        "Most business-friendly AI environment in Southeast Asia",
+        "AI Verify testing toolkit provides a practical compliance pathway",
+        "PDPA data protection is mature, well-understood, and consistently enforced",
+        "Ideal ASEAN hub: use Singapore as base to serve regional markets"
+      ]
     },
     {
       "code": "DE",
@@ -207,7 +361,21 @@
         "Federal Agency for Disruptive Innovation",
         "Focus on AI in industrial/manufacturing sectors"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 85,
+        "legal_certainty": 80,
+        "data_localization": 60,
+        "market_openness": 75,
+        "political_stability": 85,
+        "ip_liability_risk": 70
+      },
+      "expansion_notes": [
+        "EU AI Act compliance mandatory — Germany has a strict enforcement culture",
+        "Strong industrial AI sector with established Mittelstand partnership opportunities",
+        "SPRIND (Federal Agency for Disruptive Innovation) offers R&D funding",
+        "High regulatory burden offset by large market size and exceptional stability"
+      ]
     },
     {
       "code": "FR",
@@ -224,7 +392,21 @@
         "National AI strategy with €2.5B investment",
         "CNIL guidance on GDPR and AI"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 85,
+        "legal_certainty": 78,
+        "data_localization": 60,
+        "market_openness": 70,
+        "political_stability": 70,
+        "ip_liability_risk": 70
+      },
+      "expansion_notes": [
+        "EU AI Act compliance mandatory; CNIL is actively issuing AI enforcement guidance",
+        "Paris AI Action Summit signaled government openness to AI investment",
+        "€2.5B national AI strategy creates significant public-sector partnership opportunities",
+        "French language localization required for consumer-facing and public-sector AI"
+      ]
     },
     {
       "code": "IL",
@@ -241,7 +423,21 @@
         "Innovation Authority guidelines",
         "Focus on AI in defense and health"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 30,
+        "legal_certainty": 55,
+        "data_localization": 25,
+        "market_openness": 70,
+        "political_stability": 50,
+        "ip_liability_risk": 40
+      },
+      "expansion_notes": [
+        "Light-touch, innovation-friendly regulatory approach with no binding AI law",
+        "Principles-based framework provides flexibility but limited legal certainty",
+        "Deep AI talent pool (military tech to commercial); strong R&D ecosystem",
+        "Geopolitical risk requires separate risk assessment for partnerships and supply chain"
+      ]
     },
     {
       "code": "ZA",
@@ -258,7 +454,21 @@
         "POPIA data protection framework",
         "Smart South Africa Roadmap"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 35,
+        "legal_certainty": 40,
+        "data_localization": 40,
+        "market_openness": 60,
+        "political_stability": 55,
+        "ip_liability_risk": 35
+      },
+      "expansion_notes": [
+        "POPIA compliance required; National AI Policy Framework is voluntary",
+        "Presidential 4IR Commission signals positive government attitude toward AI",
+        "Growing fintech and healthcare AI market with English-language business environment",
+        "Infrastructure gaps may limit deployment scale — assess connectivity requirements"
+      ]
     },
     {
       "code": "AE",
@@ -275,7 +485,21 @@
         "Mohamed bin Zayed University of AI",
         "UAE AI Principles (2023)"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 35,
+        "legal_certainty": 60,
+        "data_localization": 45,
+        "market_openness": 85,
+        "political_stability": 75,
+        "ip_liability_risk": 40
+      },
+      "expansion_notes": [
+        "Ministry of AI provides dedicated government support for AI companies",
+        "Dubai and Abu Dhabi free zones offer IP-friendly structures and tax benefits",
+        "Personal Data Protection Law is relatively new — ensure full compliance",
+        "Strong government appetite for AI partnerships; public sector is a key buyer"
+      ]
     },
     {
       "code": "MX",
@@ -292,7 +516,21 @@
         "Senate discussions on AI regulation",
         "Participation in OECD AI principles"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 25,
+        "legal_certainty": 40,
+        "data_localization": 30,
+        "market_openness": 65,
+        "political_stability": 50,
+        "ip_liability_risk": 40
+      },
+      "expansion_notes": [
+        "No AI-specific law — operate under LFPDPPP and sector-specific regulations",
+        "USMCA membership facilitates cross-border data flows with the US and Canada",
+        "Growing domestic AI ecosystem, especially in fintech and e-commerce",
+        "Monitor political environment closely — policy direction has shifted significantly"
+      ]
     },
     {
       "code": "NG",
@@ -309,7 +547,21 @@
         "AI ecosystem development programs",
         "Focus on fintech and agriculture AI"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 25,
+        "legal_certainty": 35,
+        "data_localization": 35,
+        "market_openness": 55,
+        "political_stability": 45,
+        "ip_liability_risk": 30
+      },
+      "expansion_notes": [
+        "Early-stage AI regulation — first-mover advantage possible in key sectors",
+        "NDPR compliance required as baseline data protection obligation",
+        "Fintech and agriculture AI are the strongest growth sectors for early entry",
+        "Infrastructure and power reliability challenges must be factored into deployment planning"
+      ]
     },
     {
       "code": "KE",
@@ -326,7 +578,21 @@
         "Silicon Savannah hub for AI innovation",
         "M-Pesa AI-powered financial services"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 20,
+        "legal_certainty": 35,
+        "data_localization": 30,
+        "market_openness": 60,
+        "political_stability": 55,
+        "ip_liability_risk": 30
+      },
+      "expansion_notes": [
+        "Data Protection Act (2019) in force — ODPC compliance required",
+        "AI policy still in draft — early engagement with the ICT Authority is advisable",
+        "Silicon Savannah ecosystem provides strong local partnerships and talent",
+        "Fintech AI is particularly well-suited: M-Pesa infrastructure widely adopted"
+      ]
     },
     {
       "code": "RU",
@@ -343,7 +609,21 @@
         "AI regulatory sandboxes in Moscow",
         "State-directed AI development"
       ],
-      "links": []
+      "links": [],
+      "scores": {
+        "regulatory_burden": 50,
+        "legal_certainty": 40,
+        "data_localization": 85,
+        "market_openness": 20,
+        "political_stability": 30,
+        "ip_liability_risk": 60
+      },
+      "expansion_notes": [
+        "Significant geopolitical and sanctions risk for international companies",
+        "Strict data localization law — all personal data must be stored on Russian servers",
+        "State-directed AI development limits foreign company operational independence",
+        "Not recommended for most international AI expansion due to sanctions environment"
+      ]
     }
   ],
   "maturity_levels": {

@@ -1208,7 +1208,312 @@ a:hover { color: var(--color-accent-hover); text-decoration: underline; }
   :root { --detail-width: 100vw; }
   .stats-bar { display: none; }
 }
-</style>
+/* ===== Assess Expansion Button ===== */
+.assess-btn {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 7px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.1s;
+}
+.assess-btn:hover { background: var(--color-accent-hover); }
+.assess-btn:active { transform: scale(0.97); }
+
+/* ===== Assessor Modal Overlay ===== */
+.assessor-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.assessor-overlay.hidden { display: none; }
+
+.assessor-modal {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.assessor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+.assessor-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.assessor-subtitle {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+.assessor-close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1;
+}
+.assessor-close:hover { background: var(--color-surface2); color: var(--color-text); }
+
+.assessor-body {
+  overflow-y: auto;
+  padding: 24px;
+  flex: 1;
+}
+
+/* ===== Assessment Form ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group.full-width { grid-column: 1 / -1; }
+
+.form-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form-select, .form-input {
+  background: var(--color-surface2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  padding: 8px 10px;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+.form-select:focus, .form-input:focus { border-color: var(--color-accent); }
+
+.country-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  background: var(--color-surface2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 10px;
+}
+.country-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  padding: 3px 4px;
+  border-radius: 4px;
+  transition: background 0.1s;
+}
+.country-checkbox-label:hover { background: var(--color-border); }
+.country-checkbox-label input { accent-color: var(--color-accent); cursor: pointer; }
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 9px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--color-accent-hover); }
+.btn-secondary {
+  background: var(--color-surface2);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 9px 16px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-secondary:hover { background: var(--color-border); color: var(--color-text); }
+
+/* ===== Results View ===== */
+.results-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  margin-bottom: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.results-back:hover { color: var(--color-text); }
+
+.results-company-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+.results-company-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.results-meta {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-card {
+  background: var(--color-surface2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.result-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.result-country-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.result-score-badge {
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-width: 42px;
+  text-align: center;
+}
+.score-green { color: #2ea043; }
+.score-yellow { color: #bf8700; }
+.score-red { color: #da3633; }
+
+.result-traffic-light {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.tl-green { background: rgba(46,160,67,0.15); color: #2ea043; }
+.tl-yellow { background: rgba(191,135,0,0.15); color: #bf8700; }
+.tl-red { background: rgba(218,54,51,0.15); color: #da3633; }
+
+.score-bar-track {
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.result-dimensions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.dim-item {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+.dim-label { display: block; margin-bottom: 2px; }
+.dim-bar-track {
+  height: 3px;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.dim-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.result-notes {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+}
+.result-notes-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+}
+.result-notes ul {
+  margin: 0;
+  padding-left: 16px;
+}
+.result-notes li {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3px;
+  line-height: 1.45;
+}
+
+.results-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}
+
 </head>
 <body>
   <header class="site-header">
@@ -1233,6 +1538,7 @@ a:hover { color: var(--color-accent-hover); text-decoration: underline; }
           <span class="stat-divider">·</span>
           <span class="stat"><strong id="stat-developing">0</strong> developing</span>
         </div>
+        <button class="assess-btn" id="open-assessor">&#128202; Assess Expansion</button>
       </div>
     </div>
   </header>
@@ -1256,6 +1562,80 @@ a:hover { color: var(--color-accent-hover); text-decoration: underline; }
       <div id="detail-content"></div>
     </aside>
   </main>
+
+  <!-- ===== Expansion Assessor Modal ===== -->
+  <div class="assessor-overlay hidden" id="assessor-overlay">
+    <div class="assessor-modal" role="dialog" aria-modal="true" aria-labelledby="assessor-title">
+      <div class="assessor-header">
+        <div>
+          <div class="assessor-title" id="assessor-title">Company Expansion Assessor</div>
+          <div class="assessor-subtitle">Evaluate AI policy risk for your target markets</div>
+        </div>
+        <button class="assessor-close" id="assessor-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="assessor-body" id="assessor-body">
+        <!-- Form view -->
+        <div id="assessor-form-view">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="company-name">Company Name</label>
+              <input type="text" class="form-input" id="company-name" placeholder="e.g. Acme AI" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="origin-country">Company Origin</label>
+              <select class="form-select" id="origin-country">
+                <option value="">-- Select origin --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="industry-select">Industry</label>
+              <select class="form-select" id="industry-select">
+                <option value="consumer_tech">Consumer Technology</option>
+                <option value="finance">Finance &amp; Fintech</option>
+                <option value="healthcare">Healthcare &amp; Life Sciences</option>
+                <option value="manufacturing">Manufacturing &amp; Industry</option>
+                <option value="defense">Defense &amp; Security</option>
+                <option value="education">Education</option>
+                <option value="retail">Retail &amp; E-commerce</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="usecase-select">Primary AI Use Case</label>
+              <select class="form-select" id="usecase-select">
+                <option value="generative_ai">Generative AI / LLMs</option>
+                <option value="data_analytics">Data Analytics &amp; Insights</option>
+                <option value="automated_decisions">Automated Decision Making</option>
+                <option value="computer_vision">Computer Vision</option>
+                <option value="biometric">Biometric / Facial Recognition</option>
+                <option value="nlp">Natural Language Processing</option>
+                <option value="robotics">Robotics / Autonomous Systems</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label">Target Expansion Countries <span style="font-weight:400;text-transform:none;">(select all that apply)</span></label>
+              <div class="country-checkboxes" id="target-country-checkboxes"></div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-secondary" id="assessor-cancel">Cancel</button>
+            <button class="btn-primary" id="run-assessment">Run Assessment &rarr;</button>
+          </div>
+        </div>
+        <!-- Results view -->
+        <div id="assessor-results-view" class="hidden">
+          <button class="results-back" id="results-back">&#8592; Back to form</button>
+          <div class="results-company-header">
+            <div class="results-company-name" id="results-company-name"></div>
+            <div class="results-meta" id="results-meta"></div>
+          </div>
+          <div class="results-list" id="results-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <p>Data current as of early 2025 · Sources: government publications, OECD AI Policy Observatory, academic research ·
       <a href="https://oecd.ai" target="_blank" rel="noopener">OECD AI Policy Observatory</a>
@@ -2031,8 +2411,223 @@ function updateStats() {
     allCountries.filter(c => c.maturity === 'developing').length;
 }
 
+
+// ===== Expansion Assessor =====
+
+const INDUSTRY_WEIGHTS = {
+  consumer_tech:  { legal_certainty:0.20, market_openness:0.28, political_stability:0.17, regulatory_burden:0.15, data_localization:0.13, ip_liability_risk:0.07 },
+  finance:        { legal_certainty:0.28, market_openness:0.22, political_stability:0.17, regulatory_burden:0.20, data_localization:0.08, ip_liability_risk:0.05 },
+  healthcare:     { legal_certainty:0.30, market_openness:0.15, political_stability:0.15, regulatory_burden:0.22, data_localization:0.13, ip_liability_risk:0.05 },
+  manufacturing:  { legal_certainty:0.20, market_openness:0.27, political_stability:0.22, regulatory_burden:0.15, data_localization:0.10, ip_liability_risk:0.06 },
+  defense:        { legal_certainty:0.18, market_openness:0.35, political_stability:0.28, regulatory_burden:0.10, data_localization:0.05, ip_liability_risk:0.04 },
+  education:      { legal_certainty:0.22, market_openness:0.22, political_stability:0.25, regulatory_burden:0.15, data_localization:0.10, ip_liability_risk:0.06 },
+  retail:         { legal_certainty:0.18, market_openness:0.30, political_stability:0.20, regulatory_burden:0.17, data_localization:0.10, ip_liability_risk:0.05 },
+  other:          { legal_certainty:0.22, market_openness:0.24, political_stability:0.20, regulatory_burden:0.17, data_localization:0.11, ip_liability_risk:0.06 }
+};
+
+// Additive score adjustments per use case (country-agnostic weight shifts)
+const USECASE_BURDEN_MULTIPLIER = {
+  biometric:           1.5,   // biometrics face heaviest restrictions worldwide
+  automated_decisions: 1.35,  // GDPR Art.22, US sector rules
+  generative_ai:       1.2,   // many countries adding GenAI-specific rules
+  computer_vision:     1.1,
+  data_analytics:      1.0,
+  nlp:                 1.05,
+  robotics:            1.0,
+  other:               1.0
+};
+
+const USECASE_DATA_MULTIPLIER = {
+  data_analytics:  1.5,  // data localization hits analytics hardest
+  biometric:       1.3,
+  computer_vision: 1.1,
+  generative_ai:   1.0,
+  automated_decisions: 1.0,
+  nlp:             1.0,
+  robotics:        0.9,
+  other:           1.0
+};
+
+function calcExpansionScore(country, industry, useCase) {
+  const s = country.scores;
+  const w = Object.assign({}, INDUSTRY_WEIGHTS[industry] || INDUSTRY_WEIGHTS.other);
+
+  // Apply use-case multipliers to burden and data_localization weights, then renormalize
+  const burdenMult = USECASE_BURDEN_MULTIPLIER[useCase] || 1.0;
+  const dataMult   = USECASE_DATA_MULTIPLIER[useCase]   || 1.0;
+  w.regulatory_burden  *= burdenMult;
+  w.data_localization  *= dataMult;
+  const total = Object.values(w).reduce((a, b) => a + b, 0);
+  for (const k of Object.keys(w)) w[k] /= total;
+
+  // Positive factors (0-100: higher = better for expansion)
+  // Negative factors inverted so higher score = easier to expand
+  const score =
+    s.legal_certainty        * w.legal_certainty +
+    s.market_openness        * w.market_openness +
+    s.political_stability    * w.political_stability +
+    (100 - s.regulatory_burden)  * w.regulatory_burden +
+    (100 - s.data_localization)  * w.data_localization +
+    (100 - s.ip_liability_risk)  * w.ip_liability_risk;
+
+  return Math.round(Math.min(100, Math.max(0, score)));
+}
+
+function scoreColor(score) {
+  if (score >= 65) return '#2ea043';
+  if (score >= 42) return '#bf8700';
+  return '#da3633';
+}
+function scoreClass(score) {
+  if (score >= 65) return 'score-green';
+  if (score >= 42) return 'score-yellow';
+  return 'score-red';
+}
+function tlClass(score) {
+  if (score >= 65) return 'tl-green';
+  if (score >= 42) return 'tl-yellow';
+  return 'tl-red';
+}
+function tlLabel(score) {
+  if (score >= 65) return 'Favorable';
+  if (score >= 42) return 'Proceed with Caution';
+  return 'Significant Challenges';
+}
+
+function renderDimBar(value, color) {
+  return `<div class="dim-bar-track"><div class="dim-bar-fill" style="width:${value}%;background:${color};"></div></div>`;
+}
+
+function renderResults(companyName, industry, useCase, targetCodes) {
+  const industryLabels = {
+    consumer_tech:'Consumer Tech', finance:'Finance / Fintech', healthcare:'Healthcare',
+    manufacturing:'Manufacturing', defense:'Defense & Security', education:'Education',
+    retail:'Retail', other:'Other'
+  };
+  const useCaseLabels = {
+    generative_ai:'Generative AI / LLMs', data_analytics:'Data Analytics',
+    automated_decisions:'Automated Decision Making', computer_vision:'Computer Vision',
+    biometric:'Biometric / Facial Recognition', nlp:'Natural Language Processing',
+    robotics:'Robotics / Autonomous Systems', other:'Other'
+  };
+
+  document.getElementById('results-company-name').textContent = companyName || 'Your Company';
+  document.getElementById('results-meta').textContent =
+    `Industry: ${industryLabels[industry] || industry}  ·  Use case: ${useCaseLabels[useCase] || useCase}  ·  ${targetCodes.length} market${targetCodes.length !== 1 ? 's' : ''} assessed`;
+
+  const targets = allCountries
+    .filter(c => targetCodes.includes(c.code) && c.scores)
+    .map(c => ({ country: c, score: calcExpansionScore(c, industry, useCase) }))
+    .sort((a, b) => b.score - a.score);
+
+  if (!targets.length) {
+    document.getElementById('results-list').innerHTML =
+      '<div class="results-empty">No countries with score data selected. Please choose at least one target country.</div>';
+    return;
+  }
+
+  const dims = [
+    { key: 'legal_certainty',     label: 'Legal Certainty',   positive: true },
+    { key: 'market_openness',     label: 'Market Openness',   positive: true },
+    { key: 'political_stability', label: 'Pol. Stability',    positive: true },
+    { key: 'regulatory_burden',   label: 'Reg. Burden',       positive: false },
+    { key: 'data_localization',   label: 'Data Localization',  positive: false },
+    { key: 'ip_liability_risk',   label: 'IP/Liability Risk', positive: false }
+  ];
+
+  document.getElementById('results-list').innerHTML = targets.map(({ country: c, score }) => {
+    const color = scoreColor(score);
+    const notesHtml = (c.expansion_notes || []).map(n => `<li>${n}</li>`).join('');
+    const dimsHtml = dims.map(d => {
+      const val = c.scores[d.key];
+      const displayVal = d.positive ? val : (100 - val);
+      const barColor = displayVal >= 65 ? '#2ea043' : displayVal >= 42 ? '#bf8700' : '#da3633';
+      return `<div class="dim-item">
+        <span class="dim-label">${d.label}: ${displayVal}</span>
+        ${renderDimBar(displayVal, barColor)}
+      </div>`;
+    }).join('');
+
+    return `<div class="result-card">
+      <div class="result-card-top">
+        <div>
+          <span class="result-country-name">${c.name}</span>
+          <span class="result-traffic-light ${tlClass(score)}">${tlLabel(score)}</span>
+        </div>
+        <span class="result-score-badge ${scoreClass(score)}">${score}<span style="font-size:0.65rem;font-weight:400;">/100</span></span>
+      </div>
+      <div class="score-bar-track">
+        <div class="score-bar-fill" style="width:${score}%;background:${color};"></div>
+      </div>
+      <div class="result-dimensions">${dimsHtml}</div>
+      ${notesHtml ? `<div class="result-notes">
+        <div class="result-notes-title">Expansion Guidance</div>
+        <ul>${notesHtml}</ul>
+      </div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function populateAssessorForm() {
+  // Origin country dropdown
+  const originSel = document.getElementById('origin-country');
+  originSel.innerHTML = '<option value="">-- Select origin --</option>' +
+    allCountries.map(c => `<option value="${c.code}">${c.name}</option>`).join('');
+
+  // Target country checkboxes
+  const box = document.getElementById('target-country-checkboxes');
+  box.innerHTML = allCountries.map(c =>
+    `<label class="country-checkbox-label">
+      <input type="checkbox" value="${c.code}" name="target-country" />
+      ${c.name}
+    </label>`
+  ).join('');
+}
+
+function bindAssessor() {
+  const overlay   = document.getElementById('assessor-overlay');
+  const formView  = document.getElementById('assessor-form-view');
+  const resultsView = document.getElementById('assessor-results-view');
+
+  document.getElementById('open-assessor').addEventListener('click', () => {
+    populateAssessorForm();
+    formView.classList.remove('hidden');
+    resultsView.classList.add('hidden');
+    overlay.classList.remove('hidden');
+  });
+
+  const closeModal = () => overlay.classList.add('hidden');
+  document.getElementById('assessor-close').addEventListener('click', closeModal);
+  document.getElementById('assessor-cancel').addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  document.getElementById('run-assessment').addEventListener('click', () => {
+    const targetCodes = [...document.querySelectorAll('input[name="target-country"]:checked')]
+      .map(el => el.value);
+    if (!targetCodes.length) {
+      alert('Please select at least one target country.');
+      return;
+    }
+    const companyName = document.getElementById('company-name').value.trim();
+    const industry    = document.getElementById('industry-select').value;
+    const useCase     = document.getElementById('usecase-select').value;
+
+    renderResults(companyName, industry, useCase, targetCodes);
+    formView.classList.add('hidden');
+    resultsView.classList.remove('hidden');
+    document.getElementById('assessor-body').scrollTop = 0;
+  });
+
+  document.getElementById('results-back').addEventListener('click', () => {
+    resultsView.classList.add('hidden');
+    formView.classList.remove('hidden');
+    document.getElementById('assessor-body').scrollTop = 0;
+  });
+}
+
 // ===== Bootstrap =====
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => { init(); bindAssessor(); });
 </script>
 </body>
 </html>
